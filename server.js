@@ -1,18 +1,18 @@
 //Dependencies:
 var express = require('express');
-var inquirer = require('inquirer');
+var bodyParser = require('body-parser');
 var path = require('path');
 
 var app = express();
 var PORT = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
-app.use(inquirer.json());
-app.use(inquirer.urlencoded({
+app.use(body - parser.json());
+app.use(body - parser.urlencoded({
   extended: true
 }));
-app.use(inquirer.text());
-app.use(inquirer.json({
+app.use(bodyParser.text());
+app.use(bodyParser.json({
   type: 'application/vnd.api+json'
 }));
 
